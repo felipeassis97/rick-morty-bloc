@@ -7,10 +7,10 @@ class CharacterController extends Cubit<CharactersState> {
   final charactersService = GetIt.instance.get<LoadCharacters>();
 
   CharacterController() : super(CharacterInitial()) {
-    _loadCharacters();
+    loadCharacters();
   }
 
-  Future<void> _loadCharacters() async {
+  Future<void> loadCharacters() async {
     emit(CharacterLoading());
     final result = await charactersService.loadCharacters();
     emit(CharacterSuccess(characters: result));
