@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
               const Center(child: CircularProgressIndicator()),
             CharacterSuccess(characters: final characters) =>
               CharacterList(characters: characters),
-            CharacterFailure() => const Center(child: Text('Error')),
+            CharacterFailure(error: final error) => Center(child: Text(error)),
           });
     });
   }

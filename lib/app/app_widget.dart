@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
       title: 'Flutter BLoC',
       theme: LightTheme.themeData,
       darkTheme: DarkTheme.themeData,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       routerConfig: routes,
     );
   }

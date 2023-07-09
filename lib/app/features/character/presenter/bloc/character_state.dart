@@ -11,4 +11,7 @@ final class CharacterSuccess extends CharactersState {
   CharacterSuccess({required this.characters});
 }
 
-final class CharacterFailure extends CharactersState {}
+final class CharacterFailure extends CharactersState {
+  final String error;
+  CharacterFailure({required this.error});
+}

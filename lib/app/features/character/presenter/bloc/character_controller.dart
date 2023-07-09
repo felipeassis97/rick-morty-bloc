@@ -13,6 +13,8 @@ class CharacterController extends Cubit<CharactersState> {
   Future<void> loadCharacters() async {
     emit(CharacterLoading());
     final result = await charactersService.loadCharacters();
-    emit(CharacterSuccess(characters: result));
+
+    result.fold((characters) => emit(CharacterSuccess(characters: characters)),
+        (failure) => emit(CharacterFailure(error: failure.body.toString())));
   }
 }
