@@ -53,6 +53,7 @@ void main() {
       fail('test failed');
     }, (error) {
       expect(error, isA<CustomResponse>());
+      expect(error.statusCode != 200, true);
     });
   });
 }
